@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .panel {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        form {
+            display: grid;
+            gap: 15px;
+            max-width: 500px;
+        }
+        input, select, button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h1>Workflow Dashboard</h1>
+        <p>Welcome to the workflow management system</p>
+    </div>
+
+    <div class="panel">
+        <h2>Tasks</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Task Name</th>
+                    <th>Status</th>
+                    <th>Assignee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Review documents</td>
+                    <td>In Progress</td>
+                    <td>John Doe</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Approve budget</td>
+                    <td>Pending</td>
+                    <td>Jane Smith</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Update website</td>
+                    <td>Completed</td>
+                    <td>Mike Johnson</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="panel">
+        <h2>Create New Task</h2>
+        <form>
+            <div>
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" name="taskName" required>
+            </div>
+            <div>
+                <label for="assignee">Assignee:</label>
+                <select id="assignee" name="assignee" required>
+                    <option value="">Select an assignee</option>
+                    <option value="John Doe">John Doe</option>
+                    <option value="Jane Smith">Jane Smith</option>
+                    <option value="Mike Johnson">Mike Johnson</option>
+                </select>
+            </div>
+            <button type="submit">Create Task</button>
+        </form>
+    </div>
+</body>
+</html>
