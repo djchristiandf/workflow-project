@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+<h:head>
+    <title>Teste JBoss + JSF + RichFaces</title>
+</h:head>
+<h:body>
+    <rich:panel header="Integração Funcionando!" style="width: 300px; margin: 50px auto;">
+        <h:form>
+            <h:outputText value="JBoss + JSF 2.2 + RichFaces 4.5" style="display: block; text-align: center;"/>
+            <div style="height: 20px;"></div>
+            <a4j:commandButton value="Clique-me!" 
+                             styleClass="btn" 
+                             execute="@this" 
+                             render="@none"
+                             onclick="alert('Integração OK!')"/>
+        </h:form>
+    </rich:panel>
+    
+    <style>
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</h:body>
+</html>
